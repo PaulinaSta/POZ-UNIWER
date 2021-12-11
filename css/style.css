@@ -1,0 +1,405 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-padding-top: 78px;
+}
+
+body {
+  position: relative;
+  font-size: 20px;
+  font-family: 'Genos', sans-serif;
+  color: #eee;
+  background-color: #222;
+}
+
+h2 {
+  font-size: 36px;
+  text-align: center;
+}
+
+h2::first-letter {
+  text-transform: uppercase;
+  font-size: 72px;
+  font-weight: bold;
+  color: #aa2e30;
+}
+
+a {
+  text-decoration: none;
+}
+
+.primary-color {
+  color: #aa2e30;
+}
+
+.focus {
+  color: #eee;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 10px;
+  background-color: #aa2e30;
+  -webkit-transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.focus:hover {
+  color: #aa2e30;
+  background-color: #eee;
+}
+
+.focus.active {
+  background-color: #eee;
+}
+
+.icon {
+  text-shadow: 4px 4px 2px #111;
+}
+
+.navbar {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: #222;
+  z-index: 5;
+  -webkit-box-shadow: 0 0 10px #111;
+          box-shadow: 0 0 10px #111;
+}
+
+.navbar .fas {
+  color: #eee;
+  display: none;
+}
+
+.navbar .visible {
+  display: block;
+}
+
+.navbar .navbar-brand {
+  letter-spacing: 2px;
+  color: #eee;
+}
+
+.navbar .nav-link {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: #eee;
+  font-weight: bold;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+  color: #aa2e30;
+}
+
+.navbar .nav-link.active {
+  color: #aa2e30;
+}
+
+.header {
+  position: relative;
+  margin-top: 78px;
+  overflow: hidden;
+  background-color: #222;
+}
+
+.header h1 {
+  font-size: 42px;
+}
+
+.header h1::first-letter {
+  text-transform: uppercase;
+  font-size: 84px;
+  font-weight: bold;
+  color: #aa2e30;
+}
+
+.header h3 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.header h4 {
+  text-transform: uppercase;
+}
+
+.header .btn {
+  margin: 30px 0;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+.about {
+  background-color: #333;
+}
+
+.about .about-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  -webkit-box-shadow: 0 0 10px #222;
+          box-shadow: 0 0 10px #222;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.about .about-item:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.about i {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.about p {
+  font-size: 18px;
+}
+
+.about p:before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin: 10px auto;
+  background-color: #222;
+}
+
+.offer {
+  background-color: #222;
+}
+
+.offer .nav-item button {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #eee;
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.offer .nav-item button:hover {
+  background-color: #333;
+}
+
+.offer .nav-item button.active {
+  background-color: #333;
+}
+
+.offer .nav-item button:first-of-type {
+  margin-right: 5px;
+}
+
+.offer .accordion-item {
+  border: none;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.offer .accordion-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.offer .accordion-button.collapsed h3 {
+  background-color: transparent;
+}
+
+.offer .accordion-button.collapsed .accordion-img {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+}
+
+.offer .accordion-button i {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.offer .accordion-img-container {
+  height: 200px;
+  overflow: hidden;
+}
+
+.offer .accordion-img {
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+  -webkit-transition: -webkit-transform 0.3s, -webkit-filter 0.3s;
+  transition: -webkit-transform 0.3s, -webkit-filter 0.3s;
+  transition: transform 0.3s, filter 0.3s;
+  transition: transform 0.3s, filter 0.3s, -webkit-transform 0.3s, -webkit-filter 0.3s;
+}
+
+.offer .accordion-button:hover .accordion-img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+
+.offer .accordion-button:hover h3 {
+  background-color: #333;
+}
+
+.offer .accordion-button::after {
+  display: none;
+}
+
+.offer h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 20px;
+  background-color: #333;
+  text-transform: uppercase;
+  color: #eee;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.offer .accordion-button.collapsed i {
+  margin-left: 10px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.offer .accordion-button i {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.offer .accordion-img-1 {
+  background-image: url("../img/product1.2-small.jpg");
+}
+
+.offer .accordion-img-2 {
+  background-image: url("../img/product2-small.jpg");
+}
+
+.offer .accordion-img-3 {
+  background-image: url("../img/product3.1-small.jpg");
+}
+
+.offer .accordion-img-4 {
+  background-image: url("../img/product4.1-small.jpg");
+}
+
+.offer .accordion-img-5 {
+  background-image: url("../img/product5-small.jpg");
+}
+
+.offer .accordion-img-6 {
+  background-image: url("../img/product6-small.jpg");
+}
+
+.offer .accordion-body {
+  background-color: #333;
+}
+
+section {
+  background-color: #333;
+}
+
+.contact {
+  height: 100vh;
+}
+
+@media (min-width: 576px) {
+  h2 {
+    font-size: 42px;
+  }
+  h2::first-letter {
+    font-size: 84px;
+  }
+  .about i {
+    font-size: 42px;
+    margin-bottom: 30px;
+  }
+  .about h3 {
+    font-size: 24px;
+  }
+  .about p {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header p {
+    margin: 0;
+    font-size: 300px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    height: 78px;
+  }
+  .navbar .navbar-brand {
+    font-size: 24px;
+  }
+  .header .btn {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header h1 {
+    font-size: 56px;
+  }
+  .header h1::first-letter {
+    font-size: 112px;
+  }
+  .header h3 {
+    font-size: 42px;
+  }
+  .header p {
+    font-size: 340px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
