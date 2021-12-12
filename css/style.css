@@ -17,14 +17,25 @@ body {
   background-color: #222;
 }
 
+h1 {
+  font-size: 38px;
+}
+
+h1::first-letter {
+  text-transform: uppercase;
+  font-size: 76px;
+  font-weight: bold;
+  color: #aa2e30;
+}
+
 h2 {
-  font-size: 36px;
+  font-size: 32px;
   text-align: center;
 }
 
 h2::first-letter {
   text-transform: uppercase;
-  font-size: 72px;
+  font-size: 64px;
   font-weight: bold;
   color: #aa2e30;
 }
@@ -102,24 +113,19 @@ a {
 
 .header {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 78px;
   overflow: hidden;
   background-color: #222;
 }
 
-.header h1 {
-  font-size: 42px;
-}
-
-.header h1::first-letter {
-  text-transform: uppercase;
-  font-size: 84px;
-  font-weight: bold;
-  color: #aa2e30;
-}
-
 .header h3 {
-  font-size: 36px;
+  font-size: 32px;
   margin-bottom: 30px;
 }
 
@@ -129,8 +135,14 @@ a {
 
 .header .btn {
   margin: 30px 0;
-  padding: 10px 20px;
+  padding: 5px 10px;
   font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.header p {
+  margin: 0;
+  font-size: 300px;
 }
 
 .about {
@@ -163,17 +175,13 @@ a {
 }
 
 .about i {
-  font-size: 36px;
+  font-size: 32px;
   margin-bottom: 20px;
 }
 
 .about h3 {
-  font-size: 20px;
+  font-size: 24px;
   text-transform: uppercase;
-}
-
-.about p {
-  font-size: 18px;
 }
 
 .about p:before {
@@ -215,8 +223,10 @@ a {
 .offer .accordion-item {
   border: none;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 0px;
   background-color: transparent;
+  -webkit-box-shadow: 0 0 10px #111;
+          box-shadow: 0 0 10px #111;
 }
 
 .offer .accordion-button {
@@ -288,9 +298,9 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 20px;
   background-color: #333;
   text-transform: uppercase;
@@ -342,6 +352,28 @@ a {
   background-color: #333;
 }
 
+.offer .accordion-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.offer .accordion-body li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.offer .accordion-body p {
+  margin: 0;
+}
+
+.offer .accordion-body i {
+  margin-right: 16px;
+  font-size: 16px;
+  color: #aa2e30;
+}
+
 section {
   background-color: #333;
 }
@@ -351,28 +383,28 @@ section {
 }
 
 @media (min-width: 576px) {
+  h1 {
+    font-size: 48px;
+  }
+  h1::first-letter {
+    font-size: 96px;
+  }
   h2 {
-    font-size: 42px;
+    font-size: 38px;
   }
   h2::first-letter {
-    font-size: 84px;
+    font-size: 76px;
+  }
+  .header h3 {
+    font-size: 38px;
+  }
+  .header .btn {
+    margin: 30px 0;
+    padding: 10px 20px;
   }
   .about i {
     font-size: 42px;
     margin-bottom: 30px;
-  }
-  .about h3 {
-    font-size: 24px;
-  }
-  .about p {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 768px) {
-  .header p {
-    margin: 0;
-    font-size: 300px;
   }
 }
 
@@ -383,17 +415,24 @@ section {
   .navbar .navbar-brand {
     font-size: 24px;
   }
-  .header .btn {
-    font-size: 24px;
-  }
 }
 
 @media (min-width: 1200px) {
-  .header h1 {
+  header,
+  section {
+    height: calc(100vh - 78px);
+  }
+  h1 {
     font-size: 56px;
   }
-  .header h1::first-letter {
+  h1::first-letter {
     font-size: 112px;
+  }
+  h2 {
+    font-size: 46px;
+  }
+  h2::first-letter {
+    font-size: 92px;
   }
   .header h3 {
     font-size: 42px;

@@ -18,14 +18,25 @@ body {
 	background-color: $dark-gray;
 }
 
+h1 {
+	font-size: 38px;
+}
+
+h1::first-letter {
+	text-transform: uppercase;
+	font-size: 76px;
+	font-weight: bold;
+	color: $primary-color;
+}
+
 h2 {
-	font-size: 36px;
+	font-size: 32px;
 	text-align: center;
 }
 
 h2::first-letter {
 	text-transform: uppercase;
-	font-size: 72px;
+	font-size: 64px;
 	font-weight: bold;
 	color: $primary-color;
 }
@@ -103,23 +114,14 @@ a {
 
 .header {
 	position: relative;
+	display: flex;
+	align-items: center;
 	margin-top: 78px;
 	overflow: hidden;
 	background-color: $dark-gray;
 
-	h1 {
-		font-size: 42px;
-	}
-
-	h1::first-letter {
-		text-transform: uppercase;
-		font-size: 84px;
-		font-weight: bold;
-		color: $primary-color;
-	}
-
 	h3 {
-		font-size: 36px;
+		font-size: 32px;
 		margin-bottom: 30px;
 	}
 
@@ -129,8 +131,14 @@ a {
 
 	.btn {
 		margin: 30px 0;
-		padding: 10px 20px;
+		padding: 5px 10px;
 		font-size: 20px;
+		letter-spacing: 1px;
+	}
+
+	p {
+		margin: 0;
+		font-size: 300px;
 	}
 }
 
@@ -144,7 +152,6 @@ a {
 		flex-direction: column;
 		align-items: center;
 		height: 100%;
-		// background-color: $light-gray;
 		box-shadow: 0 0 10px $dark-gray;
 		transition: transform 0.3s;
 	}
@@ -154,17 +161,13 @@ a {
 	}
 
 	i {
-		font-size: 36px;
+		font-size: 32px;
 		margin-bottom: 20px;
 	}
 
 	h3 {
-		font-size: 20px;
+		font-size: 24px;
 		text-transform: uppercase;
-	}
-
-	p {
-		font-size: 18px;
 	}
 
 	p:before {
@@ -208,9 +211,10 @@ a {
 	.accordion-item {
 		border: none;
 		overflow: hidden;
-		border-radius: 10px;
-		// border-radius: 0px;
+		// border-radius: 10px;
+		border-radius: 0px;
 		background-color: transparent;
+		box-shadow: 0 0 10px $black;
 	}
 
 	.accordion-button {
@@ -260,7 +264,7 @@ a {
 	h3 {
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-start;
+		align-items: center;
 		font-size: 20px;
 		background-color: $gray;
 		text-transform: uppercase;
@@ -299,6 +303,26 @@ a {
 
 	.accordion-body {
 		background-color: $gray;
+
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		li {
+			display: flex;
+		}
+
+		p {
+			margin: 0;
+		}
+
+		i {
+			margin-right: 16px;
+			font-size: 16px;
+			color: $primary-color;
+		}
 	}
 }
 
@@ -313,12 +337,31 @@ section {
 // media queries
 
 @media (min-width: 576px) {
+	h1 {
+		font-size: 48px;
+	}
+
+	h1::first-letter {
+		font-size: 96px;
+	}
+
 	h2 {
-		font-size: 42px;
+		font-size: 38px;
 	}
 
 	h2::first-letter {
-		font-size: 84px;
+		font-size: 76px;
+	}
+
+	.header {
+		h3 {
+			font-size: 38px;
+		}
+
+		.btn {
+			margin: 30px 0;
+			padding: 10px 20px;
+		}
 	}
 
 	.about {
@@ -326,31 +369,10 @@ section {
 			font-size: 42px;
 			margin-bottom: 30px;
 		}
-
-		h3 {
-			font-size: 24px;
-		}
-
-		p {
-			font-size: 20px;
-		}
-	}
-}
-
-@media (min-width: 768px) {
-	.header {
-		p {
-			margin: 0;
-			font-size: 300px;
-		}
 	}
 }
 
 @media (min-width: 992px) {
-	// body {
-	// 	font-size: 24px;
-	// }
-
 	.navbar {
 		height: 78px;
 
@@ -358,24 +380,31 @@ section {
 			font-size: 24px;
 		}
 	}
-
-	.header {
-		.btn {
-			font-size: 24px;
-		}
-	}
 }
 
 @media (min-width: 1200px) {
+	header,
+	section {
+		height: calc(100vh - 78px);
+	}
+
+	h1 {
+		font-size: 56px;
+	}
+
+	h1::first-letter {
+		font-size: 112px;
+	}
+
+	h2 {
+		font-size: 46px;
+	}
+
+	h2::first-letter {
+		font-size: 92px;
+	}
+
 	.header {
-		h1 {
-			font-size: 56px;
-		}
-
-		h1::first-letter {
-			font-size: 112px;
-		}
-
 		h3 {
 			font-size: 42px;
 		}
