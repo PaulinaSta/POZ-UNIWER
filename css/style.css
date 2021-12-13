@@ -6,7 +6,7 @@
 }
 
 html {
-  scroll-padding-top: 78px;
+  scroll-padding-top: 88px;
 }
 
 body {
@@ -29,6 +29,7 @@ h1::first-letter {
 }
 
 h2 {
+  margin: 0;
   font-size: 32px;
   text-align: center;
 }
@@ -112,16 +113,20 @@ a {
 }
 
 .header {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 78px;
-  overflow: hidden;
-  background-color: #222;
+  margin-top: 88px;
+  background-image: url("../img/header-small.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.header .header-text {
+  background-color: rgba(17, 17, 17, 0.6);
 }
 
 .header h3 {
@@ -143,6 +148,15 @@ a {
 .header p {
   margin: 0;
   font-size: 300px;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .about {
@@ -247,8 +261,8 @@ a {
 }
 
 .offer .accordion-button.collapsed .accordion-img {
-  -webkit-filter: brightness(0.8);
-          filter: brightness(0.8);
+  -webkit-filter: brightness(0.6);
+          filter: brightness(0.6);
 }
 
 .offer .accordion-button i {
@@ -337,7 +351,7 @@ a {
 }
 
 .offer .accordion-img-4 {
-  background-image: url("../img/product4.1-small.jpg");
+  background-image: url("../img/product4-small.jpg");
 }
 
 .offer .accordion-img-5 {
@@ -346,6 +360,22 @@ a {
 
 .offer .accordion-img-6 {
   background-image: url("../img/product6-small.jpg");
+}
+
+.offer .accordion-img-1S {
+  background-image: url("../img/service1-small.jpg");
+}
+
+.offer .accordion-img-2S {
+  background-image: url("../img/service2.1-small.jpg");
+}
+
+.offer .accordion-img-3S {
+  background-image: url("../img/service3-small.jpg");
+}
+
+.offer .accordion-img-4S {
+  background-image: url("../img/service4.1-small.jpg");
 }
 
 .offer .accordion-body {
@@ -370,6 +400,28 @@ a {
 
 .offer .accordion-body i {
   margin-right: 16px;
+  font-size: 16px;
+  color: #aa2e30;
+}
+
+.offer .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.offer .info-link {
+  color: #eee;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.offer .info-link:hover {
+  color: #aa2e30;
+}
+
+.offer .fa-info {
+  margin-right: 10px;
   font-size: 16px;
   color: #aa2e30;
 }
@@ -409,8 +461,11 @@ section {
 }
 
 @media (min-width: 992px) {
+  .header {
+    background-image: url("../img/header-big.jpg");
+  }
   .navbar {
-    height: 78px;
+    height: 88px;
   }
   .navbar .navbar-brand {
     font-size: 24px;
@@ -420,7 +475,7 @@ section {
 @media (min-width: 1200px) {
   header,
   section {
-    height: calc(100vh - 78px);
+    min-height: calc(100vh - 88px);
   }
   h1 {
     font-size: 56px;

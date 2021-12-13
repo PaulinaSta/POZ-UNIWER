@@ -7,7 +7,7 @@
 }
 
 html {
-	scroll-padding-top: 78px;
+	scroll-padding-top: 88px;
 }
 
 body {
@@ -30,6 +30,7 @@ h1::first-letter {
 }
 
 h2 {
+	margin: 0;
 	font-size: 32px;
 	text-align: center;
 }
@@ -113,12 +114,16 @@ a {
 // header
 
 .header {
-	position: relative;
 	display: flex;
 	align-items: center;
-	margin-top: 78px;
-	overflow: hidden;
-	background-color: $dark-gray;
+	margin-top: 88px;
+	background-image: url('../img/header-small.jpg');
+	background-position: center;
+	background-size: cover;
+
+	.header-text {
+		background-color: rgba(17, 17, 17, 0.6);
+	}
 
 	h3 {
 		font-size: 32px;
@@ -140,6 +145,11 @@ a {
 		margin: 0;
 		font-size: 300px;
 	}
+}
+
+section {
+	display: flex;
+	align-items: center;
 }
 
 // about
@@ -211,7 +221,6 @@ a {
 	.accordion-item {
 		border: none;
 		overflow: hidden;
-		// border-radius: 10px;
 		border-radius: 0px;
 		background-color: transparent;
 		box-shadow: 0 0 10px $black;
@@ -228,7 +237,7 @@ a {
 	}
 
 	.accordion-button.collapsed .accordion-img {
-		filter: brightness(0.8);
+		filter: brightness(0.6);
 	}
 
 	.accordion-button i {
@@ -292,13 +301,26 @@ a {
 		background-image: url('../img/product3.1-small.jpg');
 	}
 	.accordion-img-4 {
-		background-image: url('../img/product4.1-small.jpg');
+		background-image: url('../img/product4-small.jpg');
 	}
 	.accordion-img-5 {
 		background-image: url('../img/product5-small.jpg');
 	}
 	.accordion-img-6 {
 		background-image: url('../img/product6-small.jpg');
+	}
+
+	.accordion-img-1S {
+		background-image: url('../img/service1-small.jpg');
+	}
+	.accordion-img-2S {
+		background-image: url('../img/service2.1-small.jpg');
+	}
+	.accordion-img-3S {
+		background-image: url('../img/service3-small.jpg');
+	}
+	.accordion-img-4S {
+		background-image: url('../img/service4.1-small.jpg');
 	}
 
 	.accordion-body {
@@ -323,6 +345,25 @@ a {
 			font-size: 16px;
 			color: $primary-color;
 		}
+	}
+
+	.info {
+		display: flex;
+	}
+
+	.info-link {
+		color: $white;
+		transition: color 0.3s;
+	}
+
+	.info-link:hover {
+		color: $primary-color;
+	}
+
+	.fa-info {
+		margin-right: 10px;
+		font-size: 16px;
+		color: $primary-color;
 	}
 }
 
@@ -373,8 +414,12 @@ section {
 }
 
 @media (min-width: 992px) {
+	.header {
+		background-image: url('../img/header-big.jpg');
+	}
+
 	.navbar {
-		height: 78px;
+		height: 88px;
 
 		.navbar-brand {
 			font-size: 24px;
@@ -385,7 +430,7 @@ section {
 @media (min-width: 1200px) {
 	header,
 	section {
-		height: calc(100vh - 78px);
+		min-height: calc(100vh - 88px);
 	}
 
 	h1 {
