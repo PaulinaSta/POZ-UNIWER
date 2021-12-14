@@ -21,7 +21,7 @@
     <!-- google-fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Genos:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Genos:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- style-css -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -31,11 +31,15 @@
     <!-- navigation -->
     <nav id="navbar" class="navbar navbar-expand-lg position-fixed top-0 w-100 py-4">
         <div class="container">
-            <a class="navbar-brand" href="#"><i class="fab fa-gripfire primary-color"></i> poż-uniwer</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars visible"></i>
-                <i class="fas fa-times"></i>
+            <a class="navbar-brand" href="#"><i class="fab fa-gripfire primary-color icon"></i> poż-uniwer</a>
+            <button class="navbar-toggler burger" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <!-- <i class="fas fa-bars visible"></i>
+                <i class="fas fa-times"></i> -->
+                <div class="burger__line burger__line--line1"></div>
+                <div class="burger__line burger__line--line2"></div>
+                <div class="burger__line burger__line--line3"></div>
             </button>
             <div class="collapse navbar-collapse py-2" id="navbarNavDropdown">
                 <div class="navbar-nav ms-auto">
@@ -49,7 +53,7 @@
     </nav>
 
     <!-- header -->
-    <header id="home" class="py-2 header">
+    <header id="home" class="py-3 header hero">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-8 col-lg-6 d-flex justify-content-center justify-content-md-start">
@@ -77,7 +81,7 @@
 
         <section id="about" class="py-3 about">
             <div class="container">
-                <h2>O nas</h2>
+                <h2 class="icon">O nas</h2>
                 <div class="row">
                     <div class="col-12 col-md-6 col-xl-4 py-4 p-md-4">
                         <div class="px-3 py-4 px-md-4 text-center about-item">
@@ -129,13 +133,26 @@
 
 
 
+        <section class="py-5 sentence hero">
+            <div class="hero-shadow"></div>
+            <div class="container p-5 my-sm-5 text-center">
+                <p class="sentence-text">Ogień jest piękny, lecz potrafi być także niszczycielskim
+                    żywiołem. Zadbaj o bezpieczeństwo swoje i bliskich. <span class="bold">Zabezpiecz</span> swój
+                    dobytek zgodnie z obowiązującymi <span class="bold">przepisami</span> i bądź wystarczająco
+                    przygotowany w każdej ewentualnej sytuacji rozniecenia ognia. Jesteśmy <span
+                        class="bold">ekspertami</span> pożarnictwa -
+                    możesz nam <span class="bold">zaufać.</span></p>
+            </div>
+        </section>
 
-        <section id="offer" class="offer">
 
+
+
+        <section id="offer" class="py-3 offer">
             <div class="container">
-                <h2>Oferta</h2>
+                <h2 class="icon">Oferta</h2>
 
-                <ul class="nav mb-2" id="pills-tab" role="tablist">
+                <ul class="nav my-2" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="pills-products-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-products" type="button" role="tab" aria-controls="pills-products"
@@ -669,40 +686,94 @@
                 </div>
             </div>
 
-
-
-
-
-        </section>
-
-        <section class="sentence bg-light">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat rerum vero illo, quisquam sit id?
-                Veniam, sunt obcaecati voluptas atque dolorum pariatur enim provident quasi sit unde quis aliquam quod.
-            </p>
         </section>
 
 
-        <section id="contact" class="contact">kontakt</section>
-
-        <p>Może coś o lokalizacji, gdzie dojeżdzamy, coś o indywidualnej ofercie.</p>
-        <p>w uslugach cos o montażu, o przegladzie drzwi ppoż.</p>
 
 
-        <p>Firma nasza specjalizuje się w obsłudze przeciwpożarowej w zakresie zleconego dozoru prewencyjnego,
-            wykonywaniu analiz i Instrukcji Bezpieczeństwa Pożarowego, wyposażaniu obiektów w podręczny sprzęt gaśniczy,
-            oznakowaniu dróg ewakuacyjnych i urządzeń przeciwpożarowych, serwisie gaśnic, hydrantów wewnętrznych i
-            zewnętrznych oraz szkoleniach przeciwpożarowych.</p>
+
+
+
+        <section id="contact" class="py-3 contact hero">
+            <div class="hero-shadow"></div>
+            <div class="container text-center">
+                <h2 class="icon mb-xl-5">kontakt</h2>
+
+
+
+                <div class="p-3 p-sm-5 my-5 contact-info">
+
+
+                    <p>POŻ-UNIWER PUHP Marek Poniatowski</p>
+
+                    <div class="contact-item">
+                        <p><i class="fas fa-map-marker-alt"></i></p>
+                        <p><a href="https://www.google.pl/maps/place/Po%C5%BC-Uniwer+-+Systemy+przeciwpo%C5%BCarowe/@51.0304354,17.1456099,17z/data=!3m1!4b1!4m5!3m4!1s0x470fdc6786d6434d:0x43ae0715532e9b06!8m2!3d51.030432!4d17.1477986?hl=pl&authuser=0"
+                                class="contact-link">ul. ks. Popiełuszki 12<span>55-011 Siechnice</span></a></p>
+                    </div>
+
+                    <div class="contact-item">
+                        <p><i class="fas fa-phone"></i></p>
+                        <p><a href="tel:713902029" class="contact-link">71-390-20-29</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <p><i class="fas fa-envelope"></i></p>
+                        <p><a href="mailto:poz_uniwer@wp.pl" class="contact-link">poz_uniwer@wp.pl</a></p>
+                    </div>
+
+                </div>
+
+                <!-- <div class="row py-3">
+                    <div class="col-12 col-lg-6 p-3 p-sm-5">
+                        <div class="p-3 p-sm-5 contact-info">
+
+
+                            <p>POŻ-UNIWER PUHP Marek Poniatowski</p>
+
+                            <div class="contact-item">
+                                <p><i class="fas fa-map-marker-alt"></i></p>
+                                <p><a href="https://www.google.pl/maps/place/Po%C5%BC-Uniwer+-+Systemy+przeciwpo%C5%BCarowe/@51.0304354,17.1456099,17z/data=!3m1!4b1!4m5!3m4!1s0x470fdc6786d6434d:0x43ae0715532e9b06!8m2!3d51.030432!4d17.1477986?hl=pl&authuser=0"
+                                        class="contact-link">ul. ks. Popiełuszki 12<span>55-011 Siechnice</span></a></p>
+                            </div>
+
+                            <div class="contact-item">
+                                <p><i class="fas fa-phone"></i></p>
+                                <p><a href="tel:713902029" class="contact-link">71-390-20-29</a></p>
+                            </div>
+                            <div class="contact-item">
+                                <p><i class="fas fa-envelope"></i></p>
+                                <p><a href="mailto:poz_uniwer@wp.pl" class="contact-link">poz_uniwer@wp.pl</a></p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 p-3 p-sm-5">
+                        <div class="contact-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2509.226603785981!2d17.145609915911958!3d51.03043535328464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fdc6786d6434d%3A0x43ae0715532e9b06!2sPo%C5%BC-Uniwer%20-%20Systemy%20przeciwpo%C5%BCarowe!5e0!3m2!1spl!2spl!4v1639494346320!5m2!1spl!2spl"
+                                style="border:0;" allowfullscreen="" loading="lazy" class="map"></iframe>
+                        </div>
+                    </div>
+                </div> -->
+
+
+            </div>
+        </section>
+
+
+        <footer>
+            <p>&copy; 2021 POŻ-UNIWER | Paulina Staszyńska</p>
+        </footer>
+
+
+
+        <!-- <p>Może coś o lokalizacji, gdzie dojeżdzamy, coś o indywidualnej ofercie.</p>
         <p>Zdjecia aktualnych certyfikatów</p>
-        <p>kontakt, adres, mapka</p>
-        <p>POŻ-UNIWER PUHP Marek Poniatowski <br>
-            ul. Słoneczna 5 <br>
-            55-011 Siechnice <br>
-            tel./fax: 71-390-20-29 <br>
-            e-mail: poz_uniwer@wp.pl</p>
+
+
         <br>
         <br>
-        <p>galeria: jakies zdjeica?</p>
-        <p>oferta</p>
+        <p>galeria: jakies zdjeica?</p> -->
     </main>
 
 

@@ -46,13 +46,18 @@ a {
 	text-decoration: none;
 }
 
+.bold {
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
 .primary-color {
 	color: $primary-color;
 }
 
 .focus {
 	color: $white;
-	font-weight: bold;
+	font-weight: 600;
 	text-transform: uppercase;
 	border-radius: 10px;
 	background-color: $primary-color;
@@ -70,6 +75,22 @@ a {
 
 .icon {
 	text-shadow: 4px 4px 2px $black;
+}
+
+.hero {
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	z-index: 1;
+}
+
+.hero-shadow {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(17, 17, 17, 0.8);
+	z-index: -1;
 }
 
 // navigation
@@ -98,7 +119,7 @@ a {
 	.nav-link {
 		align-self: flex-start;
 		color: $white;
-		font-weight: bold;
+		font-weight: 600;
 		transition: color 0.3s;
 	}
 
@@ -118,11 +139,9 @@ a {
 	align-items: center;
 	margin-top: 88px;
 	background-image: url('../img/header-small.jpg');
-	background-position: center;
-	background-size: cover;
 
 	.header-text {
-		background-color: rgba(17, 17, 17, 0.6);
+		background-color: rgba(17, 17, 17, 0.8);
 	}
 
 	h3 {
@@ -190,6 +209,17 @@ section {
 	}
 }
 
+// sentence
+
+.sentence {
+	background-image: url('../img/sentence-small.jpg');
+
+	.sentence-text {
+		font-size: 18px;
+		z-index: 2;
+	}
+}
+
 // offer
 
 .offer {
@@ -197,7 +227,7 @@ section {
 	.nav-item {
 		button {
 			text-transform: uppercase;
-			font-weight: bold;
+			font-weight: 600;
 			color: $white;
 			background-color: transparent;
 			border: none;
@@ -367,15 +397,181 @@ section {
 	}
 }
 
-section {
-	background-color: $gray;
+.contact {
+	background-image: url('../img//contact1-small.jpg');
+
+	.contact-info {
+		display: inline-block;
+		background-color: #11111199;
+	}
+
+	.contact-item {
+		display: flex;
+	}
+
+	.contact-link {
+		color: $white;
+		transition: color 0.3s;
+	}
+
+	span:before {
+		content: '\a';
+		white-space: pre;
+	}
+
+	.contact-link:hover {
+		color: $gray;
+		color: $primary-color;
+	}
+
+	.fas {
+		margin-right: 16px;
+		font-size: 16px;
+		color: $gray;
+		color: $primary-color;
+	}
+
+	.contact-map {
+		height: 260px;
+	}
+
+	.map {
+		height: 100%;
+		width: 100%;
+	}
 }
 
-.contact {
-	height: 100vh;
+// .contact {
+// 	background-color: $gray;
+// 	background-image: url('../img//contact1-small.jpg');
+
+// 	.contact-info {
+// 		height: 100%;
+// 		background-color: #b83c2c99;
+// 	}
+
+// 	.contact-item {
+// 		display: flex;
+// 	}
+
+// 	.contact-link {
+// 		color: $white;
+// 		transition: color 0.3s;
+// 	}
+
+// 	span:before {
+// 		content: '\a';
+// 		white-space: pre;
+// 	}
+
+// 	.contact-link:hover {
+// 		color: $gray;
+// 		color: $primary-color;
+// 	}
+
+// 	.fas {
+// 		margin-right: 16px;
+// 		font-size: 16px;
+// 		color: $gray;
+// 		color: $primary-color;
+// 	}
+
+// 	.contact-map {
+// 		height: 260px;
+// 	}
+
+// 	.map {
+// 		height: 100%;
+// 		width: 100%;
+// 	}
+// }
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 88px;
+	background-color: $dark-gray;
+
+	p {
+		margin: 0;
+	}
+}
+
+.burger {
+	position: relative;
+	height: 40px;
+	width: 40px;
+	// background-color: red;
+}
+
+.burger__line {
+	position: absolute;
+	left: 7px;
+	width: 26px;
+	height: 3px;
+	transform: scaleX(0.4);
+	transform-origin: right;
+	background-color: $white;
+	transition: 0.3s;
+}
+
+.burger__line--line1 {
+	bottom: 10px;
+	transform: scaleX(0.4);
+}
+
+.burger__line--line2 {
+	bottom: 19px;
+	transform: scaleX(0.7);
+}
+
+.burger__line--line3 {
+	bottom: 28px;
+	transform: scaleX(1);
+}
+
+.burger:hover .burger__line {
+	transform: scaleX(1);
+}
+
+.js-burger__line1--active {
+	transform-origin: left;
+	transform: rotate(-45deg) scaleX(0.7) translate(7px, 4px);
+}
+
+.js-burger__line2--active {
+	display: none;
+}
+
+.js-burger__line3--active {
+	transform-origin: left;
+	transform: rotate(45deg) scaleX(0.7) translate(11px, -2px);
+}
+
+.burger.active:hover .burger__line.burger__line--line1 {
+	transform: rotate(-45deg) scaleX(1) translate(2px, 5px);
+}
+
+.burger.active:hover .burger__line.burger__line--line3 {
+	transform: rotate(45deg) scaleX(1) translate(5px, -2px);
 }
 
 // media queries
+
+@media (min-width: 375px) {
+	.sentence {
+		.sentence-text {
+			font-size: 20px;
+		}
+	}
+
+	.contact {
+		.contact-map {
+			height: 300px;
+		}
+	}
+}
 
 @media (min-width: 576px) {
 	h1 {
@@ -411,11 +607,27 @@ section {
 			margin-bottom: 30px;
 		}
 	}
+
+	.sentence {
+		.sentence-text {
+			padding: 80px 20px;
+			line-height: 1.8;
+		}
+	}
 }
 
 @media (min-width: 992px) {
 	.header {
 		background-image: url('../img/header-big.jpg');
+	}
+
+	.sentence {
+		// background-image: url('../img/sentence-big.jpg');
+
+		.sentence-text {
+			padding: 120px 40px;
+			font-size: 24px;
+		}
 	}
 
 	.navbar {
@@ -425,12 +637,24 @@ section {
 			font-size: 24px;
 		}
 	}
+
+	.contact {
+		.contact-map {
+			height: 360px;
+		}
+	}
 }
 
 @media (min-width: 1200px) {
 	header,
-	section {
+	.about,
+	.offer,
+	.sentence {
 		min-height: calc(100vh - 88px);
+	}
+
+	.contact {
+		min-height: calc(100vh - 176px);
 	}
 
 	h1 {
@@ -456,6 +680,22 @@ section {
 
 		p {
 			font-size: 340px;
+		}
+	}
+
+	.sentence {
+		.sentence-text {
+			font-size: 28px;
+		}
+	}
+
+	.contact {
+		.contact-info {
+			font-size: 24px;
+		}
+
+		.contact-map {
+			height: 400px;
 		}
 	}
 }

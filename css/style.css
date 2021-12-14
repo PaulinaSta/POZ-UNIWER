@@ -25,7 +25,7 @@ h1::first-letter {
   text-transform: uppercase;
   font-size: 76px;
   font-weight: bold;
-  color: #aa2e30;
+  color: #b83d2c;
 }
 
 h2 {
@@ -38,29 +38,34 @@ h2::first-letter {
   text-transform: uppercase;
   font-size: 64px;
   font-weight: bold;
-  color: #aa2e30;
+  color: #b83d2c;
 }
 
 a {
   text-decoration: none;
 }
 
+.bold {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
 .primary-color {
-  color: #aa2e30;
+  color: #b83d2c;
 }
 
 .focus {
   color: #eee;
-  font-weight: bold;
+  font-weight: 600;
   text-transform: uppercase;
   border-radius: 10px;
-  background-color: #aa2e30;
+  background-color: #b83d2c;
   -webkit-transition: color 0.3s, background-color 0.3s;
   transition: color 0.3s, background-color 0.3s;
 }
 
 .focus:hover {
-  color: #aa2e30;
+  color: #b83d2c;
   background-color: #eee;
 }
 
@@ -70,6 +75,22 @@ a {
 
 .icon {
   text-shadow: 4px 4px 2px #111;
+}
+
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+.hero-shadow {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(17, 17, 17, 0.8);
+  z-index: -1;
 }
 
 .navbar {
@@ -99,17 +120,17 @@ a {
   -ms-flex-item-align: start;
       align-self: flex-start;
   color: #eee;
-  font-weight: bold;
+  font-weight: 600;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
 .navbar .nav-link:hover {
-  color: #aa2e30;
+  color: #b83d2c;
 }
 
 .navbar .nav-link.active {
-  color: #aa2e30;
+  color: #b83d2c;
 }
 
 .header {
@@ -121,12 +142,10 @@ a {
           align-items: center;
   margin-top: 88px;
   background-image: url("../img/header-small.jpg");
-  background-position: center;
-  background-size: cover;
 }
 
 .header .header-text {
-  background-color: rgba(17, 17, 17, 0.6);
+  background-color: rgba(17, 17, 17, 0.8);
 }
 
 .header h3 {
@@ -207,13 +226,22 @@ section {
   background-color: #222;
 }
 
+.sentence {
+  background-image: url("../img/sentence-small.jpg");
+}
+
+.sentence .sentence-text {
+  font-size: 18px;
+  z-index: 2;
+}
+
 .offer {
   background-color: #222;
 }
 
 .offer .nav-item button {
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 600;
   color: #eee;
   background-color: transparent;
   border: none;
@@ -401,7 +429,7 @@ section {
 .offer .accordion-body i {
   margin-right: 16px;
   font-size: 16px;
-  color: #aa2e30;
+  color: #b83d2c;
 }
 
 .offer .info {
@@ -417,21 +445,158 @@ section {
 }
 
 .offer .info-link:hover {
-  color: #aa2e30;
+  color: #b83d2c;
 }
 
 .offer .fa-info {
   margin-right: 10px;
   font-size: 16px;
-  color: #aa2e30;
-}
-
-section {
-  background-color: #333;
+  color: #b83d2c;
 }
 
 .contact {
-  height: 100vh;
+  background-image: url("../img//contact1-small.jpg");
+}
+
+.contact .contact-info {
+  display: inline-block;
+  background-color: #11111199;
+}
+
+.contact .contact-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact .contact-link {
+  color: #eee;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.contact span:before {
+  content: '\a';
+  white-space: pre;
+}
+
+.contact .contact-link:hover {
+  color: #333;
+  color: #b83d2c;
+}
+
+.contact .fas {
+  margin-right: 16px;
+  font-size: 16px;
+  color: #333;
+  color: #b83d2c;
+}
+
+.contact .contact-map {
+  height: 260px;
+}
+
+.contact .map {
+  height: 100%;
+  width: 100%;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 88px;
+  background-color: #222;
+}
+
+footer p {
+  margin: 0;
+}
+
+.burger {
+  position: relative;
+  height: 40px;
+  width: 40px;
+}
+
+.burger__line {
+  position: absolute;
+  left: 7px;
+  width: 26px;
+  height: 3px;
+  -webkit-transform: scaleX(0.4);
+          transform: scaleX(0.4);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  background-color: #eee;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.burger__line--line1 {
+  bottom: 10px;
+  -webkit-transform: scaleX(0.4);
+          transform: scaleX(0.4);
+}
+
+.burger__line--line2 {
+  bottom: 19px;
+  -webkit-transform: scaleX(0.7);
+          transform: scaleX(0.7);
+}
+
+.burger__line--line3 {
+  bottom: 28px;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.burger:hover .burger__line {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.js-burger__line1--active {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: rotate(-45deg) scaleX(0.7) translate(7px, 4px);
+          transform: rotate(-45deg) scaleX(0.7) translate(7px, 4px);
+}
+
+.js-burger__line2--active {
+  display: none;
+}
+
+.js-burger__line3--active {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: rotate(45deg) scaleX(0.7) translate(11px, -2px);
+          transform: rotate(45deg) scaleX(0.7) translate(11px, -2px);
+}
+
+.burger.active:hover .burger__line.burger__line--line1 {
+  -webkit-transform: rotate(-45deg) scaleX(1) translate(2px, 5px);
+          transform: rotate(-45deg) scaleX(1) translate(2px, 5px);
+}
+
+.burger.active:hover .burger__line.burger__line--line3 {
+  -webkit-transform: rotate(45deg) scaleX(1) translate(5px, -2px);
+          transform: rotate(45deg) scaleX(1) translate(5px, -2px);
+}
+
+@media (min-width: 375px) {
+  .sentence .sentence-text {
+    font-size: 20px;
+  }
+  .contact .contact-map {
+    height: 300px;
+  }
 }
 
 @media (min-width: 576px) {
@@ -458,11 +623,19 @@ section {
     font-size: 42px;
     margin-bottom: 30px;
   }
+  .sentence .sentence-text {
+    padding: 80px 20px;
+    line-height: 1.8;
+  }
 }
 
 @media (min-width: 992px) {
   .header {
     background-image: url("../img/header-big.jpg");
+  }
+  .sentence .sentence-text {
+    padding: 120px 40px;
+    font-size: 24px;
   }
   .navbar {
     height: 88px;
@@ -470,12 +643,20 @@ section {
   .navbar .navbar-brand {
     font-size: 24px;
   }
+  .contact .contact-map {
+    height: 360px;
+  }
 }
 
 @media (min-width: 1200px) {
   header,
-  section {
+  .about,
+  .offer,
+  .sentence {
     min-height: calc(100vh - 88px);
+  }
+  .contact {
+    min-height: calc(100vh - 176px);
   }
   h1 {
     font-size: 56px;
@@ -494,6 +675,15 @@ section {
   }
   .header p {
     font-size: 340px;
+  }
+  .sentence .sentence-text {
+    font-size: 28px;
+  }
+  .contact .contact-info {
+    font-size: 24px;
+  }
+  .contact .contact-map {
+    height: 400px;
   }
 }
 /*# sourceMappingURL=style.css.map */
