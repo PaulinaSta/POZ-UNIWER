@@ -174,15 +174,16 @@ section {
 // about
 
 .about {
-	background-color: $gray;
+	background-color: $dark-gray;
 
 	.about-item {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		height: 100%;
-		box-shadow: 0 0 10px $dark-gray;
 		transition: transform 0.3s;
+		background-color: $gray;
+		// box-shadow: 0 0 10px $black;
 	}
 
 	.about-item:hover {
@@ -253,7 +254,7 @@ section {
 		overflow: hidden;
 		border-radius: 0px;
 		background-color: transparent;
-		box-shadow: 0 0 10px $black;
+		// box-shadow: 0 0 10px $black;
 	}
 
 	.accordion-button {
@@ -263,7 +264,8 @@ section {
 	}
 
 	.accordion-button.collapsed h3 {
-		background-color: transparent;
+		// background-color: transparent;
+		background-color: $gray;
 	}
 
 	.accordion-button.collapsed .accordion-img {
@@ -402,6 +404,7 @@ section {
 
 	.contact-info {
 		display: inline-block;
+		width: auto;
 		background-color: #11111199;
 	}
 
@@ -412,12 +415,17 @@ section {
 	.contact-link {
 		color: $white;
 		transition: color 0.3s;
+		text-align: left;
 	}
 
 	span:before {
 		content: '\a';
 		white-space: pre;
 	}
+
+	// span {
+	// 	display: block;
+	// }
 
 	.contact-link:hover {
 		color: $gray;
