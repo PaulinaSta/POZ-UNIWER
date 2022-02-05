@@ -691,6 +691,9 @@
 
 
 
+
+
+
         <section id="contact" class="py-3 contact hero">
             <div class="hero-shadow"></div>
             <div class="container text-center">
@@ -698,31 +701,96 @@
 
 
 
-                <div class="p-3 p-sm-5 my-5 contact-info">
+                <div class="row">
 
 
-                    <p>POŻ-UNIWER PUHP</p>
+                    <div class="col-12 col-md-6 p-3 my-3">
+                        <div class="p-3 contact-info">
+                            <p class="text-start contact-info-title">poż-uniwer puhp</p>
 
-                    <div class="contact-item">
-                        <p><i class="fas fa-map-marker-alt"></i></p>
-                        <p><a href="#" target="_blank" class="contact-link">ul. Pożarowa 1<span>55-011
-                                    Siechnice</span></a></p>
+                            <div class="contact-item">
+                                <p><i class="fas fa-map-marker-alt"></i></p>
+                                <p><a href="#" target="_blank" class="contact-link">ul. Pożarowa 1<span>55-011
+                                            Siechnice</span></a></p>
+                            </div>
+
+                            <div class="contact-item">
+                                <p><i class="fas fa-phone"></i></p>
+                                <p><a href="#" target="_blank" class="contact-link">123-456-789</a></p>
+                            </div>
+                            <div class="contact-item">
+                                <p><i class="fas fa-envelope"></i></p>
+                                <p><a href="#" target="_blank" class="contact-link">mail@mail.pl</a>
+                                </p>
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <div class="contact-item">
-                        <p><i class="fas fa-phone"></i></p>
-                        <p><a href="#" target="_blank" class="contact-link">123-456-789</a></p>
+                    <div class="col-12 col-md-6 p-3 my-3">
+                        <div class="p-3 contact-info">
+                            <p class="text-start contact-info-title">formularz kontaktowy</p>
+
+                            <form>
+                                <div class="py-2 contact-item contact-item--form">
+                                    <label for="name">imię:</label>
+                                    <input type="text" id="name" class="py-1 px-2">
+                                </div>
+                                <div class="py-2 contact-item contact-item--form">
+                                    <label for="email">adres e-mail:</label>
+                                    <input type="email" id="email" class="py-1 px-2">
+                                </div>
+                                <div class="py-2 contact-item contact-item--form">
+                                    <label for="msg">twoja wiadomość:</label>
+                                    <textarea id="msg" class="py-1 px-2"></textarea>
+                                </div>
+                                <div class="py-2 contact-item contact-item--form">
+                                    <button class="py-2 px-5 btn focus" type="submit">wyślij</button>
+                                </div>
+
+                            </form>
+
+                        </div>
+
                     </div>
-                    <div class="contact-item">
-                        <p><i class="fas fa-envelope"></i></p>
-                        <p><a href="#" target="_blank" class="contact-link">mail@mail.pl</a>
-                        </p>
-                    </div>
+
+
+
+
+
+                    <!-- <div class="col-12 p-3 p-sm-5 my-5 contact-info">
+
+
+                        <p>POŻ-UNIWER PUHP</p>
+
+                        <div class="contact-item">
+                            <p><i class="fas fa-map-marker-alt"></i></p>
+                            <p><a href="#" target="_blank" class="contact-link">ul. Pożarowa 1<span>55-011
+                                        Siechnice</span></a></p>
+                        </div>
+
+                        <div class="contact-item">
+                            <p><i class="fas fa-phone"></i></p>
+                            <p><a href="#" target="_blank" class="contact-link">123-456-789</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <p><i class="fas fa-envelope"></i></p>
+                            <p><a href="#" target="_blank" class="contact-link">mail@mail.pl</a>
+                            </p>
+                        </div>
+
+                    </div> -->
 
                 </div>
 
 
+
+
             </div>
+
+
+
 
 
 
@@ -731,7 +799,7 @@
 
         <footer>
             <div class="container text-center">
-                <p>&copy; 2021 POŻ-UNIWER</p>
+                <p>&copy; <span class="footer-year"></span> POŻ-UNIWER</p>
             </div>
         </footer>
 

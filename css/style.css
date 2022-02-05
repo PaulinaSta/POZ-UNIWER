@@ -456,15 +456,26 @@ section {
 }
 
 .contact .contact-info {
-  display: inline-block;
-  width: auto;
   background-color: #11111199;
+}
+
+.contact .contact-info-title {
+  text-transform: uppercase;
 }
 
 .contact .contact-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.contact .contact-item--form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  text-transform: uppercase;
 }
 
 .contact .contact-link {
@@ -491,13 +502,21 @@ section {
   color: #b83d2c;
 }
 
-.contact .contact-map {
-  height: 260px;
+.contact form input {
+  background-color: #eee;
+  border: none;
 }
 
-.contact .map {
-  height: 100%;
-  width: 100%;
+.contact form textarea {
+  background-color: #eee;
+  border: none;
+  min-height: 200px;
+  resize: vertical;
+}
+
+.contact form button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 footer {
@@ -564,8 +583,8 @@ footer p {
 .js-burger__line1--active {
   -webkit-transform-origin: left;
           transform-origin: left;
-  -webkit-transform: rotate(-45deg) scaleX(0.7) translate(7px, 4px);
-          transform: rotate(-45deg) scaleX(0.7) translate(7px, 4px);
+  -webkit-transform: rotate(-45deg) scaleX(0.7) translate(8px, 4px);
+          transform: rotate(-45deg) scaleX(0.7) translate(8px, 4px);
 }
 
 .js-burger__line2--active {
@@ -580,21 +599,18 @@ footer p {
 }
 
 .burger.active:hover .burger__line.burger__line--line1 {
-  -webkit-transform: rotate(-45deg) scaleX(1) translate(2px, 5px);
-          transform: rotate(-45deg) scaleX(1) translate(2px, 5px);
+  -webkit-transform: rotate(-45deg) scaleX(1) translate(2px, 4px);
+          transform: rotate(-45deg) scaleX(1) translate(2px, 4px);
 }
 
 .burger.active:hover .burger__line.burger__line--line3 {
-  -webkit-transform: rotate(45deg) scaleX(1) translate(5px, -2px);
-          transform: rotate(45deg) scaleX(1) translate(5px, -2px);
+  -webkit-transform: rotate(45deg) scaleX(1) translate(4px, -2px);
+          transform: rotate(45deg) scaleX(1) translate(4px, -2px);
 }
 
 @media (min-width: 375px) {
   .sentence .sentence-text {
     font-size: 20px;
-  }
-  .contact .contact-map {
-    height: 300px;
   }
 }
 
@@ -642,8 +658,8 @@ footer p {
   .navbar .navbar-brand {
     font-size: 24px;
   }
-  .contact .contact-map {
-    height: 360px;
+  .contact form button {
+    font-size: 20px;
   }
 }
 
@@ -681,8 +697,8 @@ footer p {
   .contact .contact-info {
     font-size: 24px;
   }
-  .contact .contact-map {
-    height: 400px;
+  .contact form button {
+    font-size: 24px;
   }
 }
 /*# sourceMappingURL=style.css.map */

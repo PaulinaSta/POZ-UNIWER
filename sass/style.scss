@@ -403,13 +403,21 @@ section {
 	background-image: url('../img//contact1-small.jpg');
 
 	.contact-info {
-		display: inline-block;
-		width: auto;
 		background-color: #11111199;
+	}
+
+	.contact-info-title {
+		text-transform: uppercase;
 	}
 
 	.contact-item {
 		display: flex;
+
+		&--form {
+			flex-direction: column;
+			text-align: left;
+			text-transform: uppercase;
+		}
 	}
 
 	.contact-link {
@@ -423,10 +431,6 @@ section {
 		white-space: pre;
 	}
 
-	// span {
-	// 	display: block;
-	// }
-
 	.contact-link:hover {
 		color: $gray;
 		color: $primary-color;
@@ -439,60 +443,24 @@ section {
 		color: $primary-color;
 	}
 
-	.contact-map {
-		height: 260px;
-	}
+	form {
+		input {
+			background-color: $white;
+			border: none;
+		}
 
-	.map {
-		height: 100%;
-		width: 100%;
+		textarea {
+			background-color: $white;
+			border: none;
+			min-height: 200px;
+			resize: vertical;
+		}
+
+		button {
+			align-self: flex-end;
+		}
 	}
 }
-
-// .contact {
-// 	background-color: $gray;
-// 	background-image: url('../img//contact1-small.jpg');
-
-// 	.contact-info {
-// 		height: 100%;
-// 		background-color: #b83c2c99;
-// 	}
-
-// 	.contact-item {
-// 		display: flex;
-// 	}
-
-// 	.contact-link {
-// 		color: $white;
-// 		transition: color 0.3s;
-// 	}
-
-// 	span:before {
-// 		content: '\a';
-// 		white-space: pre;
-// 	}
-
-// 	.contact-link:hover {
-// 		color: $gray;
-// 		color: $primary-color;
-// 	}
-
-// 	.fas {
-// 		margin-right: 16px;
-// 		font-size: 16px;
-// 		color: $gray;
-// 		color: $primary-color;
-// 	}
-
-// 	.contact-map {
-// 		height: 260px;
-// 	}
-
-// 	.map {
-// 		height: 100%;
-// 		width: 100%;
-// 	}
-// }
 
 footer {
 	display: flex;
@@ -545,7 +513,7 @@ footer {
 
 .js-burger__line1--active {
 	transform-origin: left;
-	transform: rotate(-45deg) scaleX(0.7) translate(7px, 4px);
+	transform: rotate(-45deg) scaleX(0.7) translate(8px, 4px);
 }
 
 .js-burger__line2--active {
@@ -558,11 +526,11 @@ footer {
 }
 
 .burger.active:hover .burger__line.burger__line--line1 {
-	transform: rotate(-45deg) scaleX(1) translate(2px, 5px);
+	transform: rotate(-45deg) scaleX(1) translate(2px, 4px);
 }
 
 .burger.active:hover .burger__line.burger__line--line3 {
-	transform: rotate(45deg) scaleX(1) translate(5px, -2px);
+	transform: rotate(45deg) scaleX(1) translate(4px, -2px);
 }
 
 // media queries
@@ -571,12 +539,6 @@ footer {
 	.sentence {
 		.sentence-text {
 			font-size: 20px;
-		}
-	}
-
-	.contact {
-		.contact-map {
-			height: 300px;
 		}
 	}
 }
@@ -647,8 +609,10 @@ footer {
 	}
 
 	.contact {
-		.contact-map {
-			height: 360px;
+		form {
+			button {
+				font-size: 20px;
+			}
 		}
 	}
 }
@@ -702,8 +666,10 @@ footer {
 			font-size: 24px;
 		}
 
-		.contact-map {
-			height: 400px;
+		form {
+			button {
+				font-size: 24px;
+			}
 		}
 	}
 }
